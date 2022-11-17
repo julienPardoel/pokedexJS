@@ -18,10 +18,12 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 
       //   img
       const img = document.createElement("img");
+      img.classList.add("img");
       img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonNumber}.png`;
 
       //   name
       const name = document.createElement("div");
+      name.classList.add("name");
       const pokemonName = pokemon.name;
       name.innerText = pokemonName;
 
