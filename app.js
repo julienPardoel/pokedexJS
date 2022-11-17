@@ -10,16 +10,25 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
       const ceil = document.createElement("div");
       ceil.classList.add("item");
       const pokemonNumber = ++index;
+
+      //   number
+      const number = document.createElement("div");
+      number.classList.add("number");
+      number.innerText = `#${pokemonNumber}`;
+
       //   img
       const img = document.createElement("img");
       img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonNumber}.png`;
+
       //   name
       const name = document.createElement("div");
       const pokemonName = pokemon.name;
       name.innerText = pokemonName;
+
       //   newItem
+      grid.appendChild(ceil);
+      ceil.appendChild(number);
       ceil.appendChild(img);
       ceil.appendChild(name);
-      grid.appendChild(ceil);
     });
   });
